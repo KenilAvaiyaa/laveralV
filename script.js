@@ -128,6 +128,39 @@ function imginintro() {
 }
 imginintro();
 
+function elemicon() {
+  var rightElem = document.querySelectorAll(".elem_conte");
+
+  rightElem.forEach((elem) => {
+    elem.addEventListener("mouseenter", () => {
+      console.log(elem.childNodes)
+      gsap.to(".aimationicon1", {
+        opacity: 0,
+        top: "-50%",
+        right: "-50%"
+      })
+      gsap.to(".aimationicon2", {
+        opacity: 1,
+        top: "0%",
+        right: "0%"
+      });
+    });
+    elem.addEventListener("mouseleave", () => {
+      gsap.to(".aimationicon1", {
+        opacity: 1,
+        top: "0%",
+        right: "0%"
+      })
+      gsap.to(".aimationicon2", {
+        opacity: 0,
+        top: "50%",
+        right: "50%"
+      });
+    });
+  });
+}
+elemicon();
+
 function videoplay() {
   var videodivCenter = document.querySelector(".playbutton");
   var video = document.querySelector(".videodiv video");

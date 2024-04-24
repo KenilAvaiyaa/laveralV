@@ -301,6 +301,25 @@ nav .nav_bottom{
     color: rgb(93, 92, 92);
 }
 
+.elem_icon{
+    position: relative;
+    height: 2vw;
+    width: 2vw;
+    /* background-color: #0CA34E; */
+    overflow: hidden;
+}
+
+.aimationicon1{
+    position: absolute;
+}
+
+.aimationicon2{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    opacity: 0;
+}
+
 .time i{
     color: white;
     height: 2vw;
@@ -330,6 +349,7 @@ nav .nav_bottom{
     background-image: url(./images/videopage.webp);
     background-position: center;
     background-size: cover;
+    /* position: relative; */
     display: flex;
     flex-direction: column;
     gap: 1vw;
