@@ -1,32 +1,32 @@
 function navservice() {
-    const nav = document.querySelector(".service");
-    nav.addEventListener("mouseenter", () => {
-      let t2 = gsap.timeline();
-      t2.to(".nav_bottom", {
-        height: "20vh",
-        duration: 0.15,
-      });
-      t2.to(".nav-elem h5", {
-        display: "block",
-        duration: 0.2,
-      });
-      t2.from(".nav-elem h5 span", {
-        y: 25,
-        stagger:0.09
-      });
+  const nav = document.querySelector(".service");
+  nav.addEventListener("mouseenter", () => {
+    let t2 = gsap.timeline();
+    t2.to(".nav_bottom", {
+      height: "20vh",
+      duration: 0.15,
     });
-    nav.addEventListener("mouseleave", () => {
-      let t2 = gsap.timeline();
-      t2.to(".nav_bottom", {
-        height: "0vh",
-        duration: 0,
-      });
-      t2.to(".nav-elem h5", {
-        display: "none",
-      });
+    t2.to(".nav-elem h5", {
+      display: "block",
+      duration: 0.2,
     });
-  }
-  navservice();
+    t2.from(".nav-elem h5 span", {
+      y: 25,
+      stagger: 0.09,
+    });
+  });
+  nav.addEventListener("mouseleave", () => {
+    let t2 = gsap.timeline();
+    t2.to(".nav_bottom", {
+      height: "0vh",
+      duration: 0,
+    });
+    t2.to(".nav-elem h5", {
+      display: "none",
+    });
+  });
+}
+navservice();
 
 function hometext() {
   let t1 = gsap.timeline();
@@ -83,44 +83,47 @@ function buttoneffect() {
 }
 buttoneffect();
 
-function navline(){
-    let t4 = gsap.timeline({
-        scrollTrigger:{
-            trigger: ".nav_bottom",
-            scrollBy:"body",
-            start: "top 10%",
-            // markers:true,
-            scrub:0.5,
-            duration:1
-        }
-    })
-    t4.to("nav",{
-        height:"8vh",
-        padding:"1vw 4vw",
-        ease: "power4.out"
-    })
+function navline() {
+  let t4 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".nav_bottom",
+      scrollBy: "body",
+      start: "top 10%",
+      // markers:true,
+      scrub: 0.5,
+      duration: 1,
+    },
+  });
+  t4.to("nav", {
+    height: "8vh",
+    padding: "1vw 4vw",
+    ease: "power4.out",
+  });
 }
-navline()
+navline();
 
-var rightElem = document.querySelectorAll(".elem_conte") 
+function imginintro() {
+  var rightElem = document.querySelectorAll(".elem_conte");
 
-rightElem.forEach((elem)=>{
-  elem.addEventListener('mouseenter',()=>{
-    gsap.to(elem.childNodes[1], {
-      opacity: 1,
-      scale: 1
-  })
-  })
-  elem.addEventListener('mouseleave',()=>{
-    gsap.to(elem.childNodes[1], {
-      opacity: 0,
-      scale: 0
-  })
-  })
-  elem.addEventListener('mousemove',(dets)=>{
-    gsap.to(elem.childNodes[1], {
-      x: dets.x - elem.getBoundingClientRect().x-20 ,
-      y: dets.y - elem.getBoundingClientRect().y -50
-  })
-  })
-})
+  rightElem.forEach((elem) => {
+    elem.addEventListener("mouseenter", () => {
+      gsap.to(elem.childNodes[1], {
+        opacity: 1,
+        scale: 1,
+      });
+    });
+    elem.addEventListener("mouseleave", () => {
+      gsap.to(elem.childNodes[1], {
+        opacity: 0,
+        scale: 0,
+      });
+    });
+    elem.addEventListener("mousemove", (dets) => {
+      gsap.to(elem.childNodes[1], {
+        x: dets.x - elem.getBoundingClientRect().x - 20,
+        y: dets.y - elem.getBoundingClientRect().y - 50,
+      });
+    });
+  });
+}
+imginintro();
