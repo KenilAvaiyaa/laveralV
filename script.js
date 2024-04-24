@@ -127,3 +127,26 @@ function imginintro() {
   });
 }
 imginintro();
+
+function videoplay() {
+  var videodivCenter = document.querySelector(".playbutton");
+  var video = document.querySelector(".videodiv video");
+
+  videodivCenter.addEventListener("click", () => {
+    video.play(),
+      gsap.to("video", {
+        opacity: 1,
+        transform: "scaleX(1) scaleY(1)",
+        borderRadius: "0px",
+      });
+  });
+  video.addEventListener("click", () => {
+    video.pause(),
+      gsap.to("video", {
+        opacity: 0,
+        transform: "scaleX(0.7) scaleY(0)",
+        borderRadius: "30px",
+      });
+  });
+}
+videoplay();
