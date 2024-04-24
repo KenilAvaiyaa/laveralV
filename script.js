@@ -101,3 +101,26 @@ function navline(){
     })
 }
 navline()
+
+var rightElem = document.querySelectorAll(".elem_conte") 
+
+rightElem.forEach((elem)=>{
+  elem.addEventListener('mouseenter',()=>{
+    gsap.to(elem.childNodes[1], {
+      opacity: 1,
+      scale: 1
+  })
+  })
+  elem.addEventListener('mouseleave',()=>{
+    gsap.to(elem.childNodes[1], {
+      opacity: 0,
+      scale: 0
+  })
+  })
+  elem.addEventListener('mousemove',(dets)=>{
+    gsap.to(elem.childNodes[1], {
+      x: dets.x - elem.getBoundingClientRect().x-20 ,
+      y: dets.y - elem.getBoundingClientRect().y -50
+  })
+  })
+})
