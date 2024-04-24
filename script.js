@@ -31,7 +31,7 @@ function navservice() {
 function hometext() {
   let t1 = gsap.timeline();
 
-  t1.from(".head_text,.support_text,.main_text", {
+  t1.from(".head_text,.support_text,.highlight_text", {
     y: "100%",
     duration: 2,
     opacity: -1,
