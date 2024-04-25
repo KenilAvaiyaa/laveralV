@@ -597,8 +597,6 @@ nav .nav_bottom{
     overflow: hidden;
 }
 
-
-
 .case1{
     position: absolute;
 }
@@ -638,6 +636,8 @@ nav .nav_bottom{
 
 .case_button{
     bottom: 1%;
+    /* width: 70%;
+    margin-top: 20vw; */
     position: absolute;
     padding: 0.5vw 1vw;
     background-color: #4f5bff;
@@ -698,9 +698,42 @@ nav .nav_bottom{
     /* background-color: #0CA34E; */
 }
 
-.small>h1{
+.small_heading{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1vw;
+}
+
+.small_heading h1{
     font-size: 2.5vw;
     font-weight: 400;
+}
+
+.small_heading i{
+    font-size: 1.8vw;
+}
+
+.small_heading>.case_icon{
+    position: relative;
+    height: 2vw;
+    width: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5vw;
+    overflow: hidden;
+}
+
+.case1{
+    position: absolute;
+}
+
+.case2{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    opacity: 0;
 }
 
 .small .bottom{

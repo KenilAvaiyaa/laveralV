@@ -133,25 +133,25 @@ function elemicon() {
 
   rightElem.forEach((elem) => {
     elem.addEventListener("mouseenter", () => {
-      console.log(elem.childNodes)
-      gsap.to(".aimationicon1", {
+      // console.log(elem.childNodes[5].childNodes[3].childNodes[1])
+      gsap.to(elem.childNodes[5].childNodes[3].childNodes[1], {
         opacity: 0,
         top: "-50%",
         right: "-50%"
       })
-      gsap.to(".aimationicon2", {
+      gsap.to(elem.childNodes[5].childNodes[3].childNodes[3], {
         opacity: 1,
         top: "0%",
         right: "0%"
       });
     });
     elem.addEventListener("mouseleave", () => {
-      gsap.to(".aimationicon1", {
+      gsap.to(elem.childNodes[5].childNodes[3].childNodes[1], {
         opacity: 1,
         top: "0%",
         right: "0%"
       })
-      gsap.to(".aimationicon2", {
+      gsap.to(elem.childNodes[5].childNodes[3].childNodes[3], {
         opacity: 0,
         top: "50%",
         right: "50%"
@@ -200,7 +200,7 @@ var smallright = document.querySelectorAll(".small")
 
 smallright.forEach((elem)=>{
   elem.addEventListener("mouseenter",()=>{
-    // console.log(elem.childNodes[5].childNodes[3])
+    // console.log(elem.childNodes[1].childNodes[3].childNodes[1])
     elem.childNodes[3].style.opacity="0"
     elem.childNodes[5].childNodes[3].play()
     elem.childNodes[5].childNodes[3].style.top="-70%"
@@ -212,7 +212,94 @@ smallright.forEach((elem)=>{
     elem.childNodes[5].childNodes[3].style.display="none"
     elem.childNodes[5].childNodes[3].lode()
   })
+  elem.addEventListener("mouseenter",()=>{
+    // console.log(elem.childNodes[1].childNodes[3].childNodes[1])
+    gsap.to(elem.childNodes[1].childNodes[3].childNodes[1], {
+      opacity: 0,
+      top: "-100%",
+      right: "-100%"
+    })
+    gsap.to(elem.childNodes[1].childNodes[3].childNodes[3], {
+      opacity: 1,
+      top: "0%",
+      right: "0%"
+    });
+})
+elem.addEventListener("mouseleave",()=>{
+  // console.log(elem.childNodes[1].childNodes[3].childNodes[1])
+  gsap.to(elem.childNodes[1].childNodes[3].childNodes[1], {
+    opacity: 1,
+    top: "0%",
+    right: "0%"
+  })
+  gsap.to(elem.childNodes[1].childNodes[3].childNodes[3], {
+    opacity: 0,
+    top: "100%",
+    right: "100%"
+  });
+})
 })
 }
 videoplay();
 
+function casebutton(){
+  var cbut = document.querySelector(".case_button")
+
+  cbut.addEventListener("mouseenter",()=>{
+    console.log("heloo")
+    gsap.to(".case_button1", {
+      opacity: 0,
+      top: "-50%",
+      right: "-50%"
+    })
+    gsap.to(".case_button2", {
+      opacity: 1,
+      top: "10%",
+      right: "10%"
+    });
+  });
+  cbut.addEventListener("mouseleave",()=>{
+    gsap.to(".case_button1", {
+      opacity: 1,
+      top: "10%",
+      right: "10%"
+    })
+    gsap.to(".case_button2", {
+      opacity: 0,
+      top: "50%",
+      right: "50%"
+    });
+  });
+
+  var casestude = document.querySelectorAll(".case_left")
+
+casestude.forEach((elem)=>{
+  elem.addEventListener("mouseenter",()=>{
+      // console.log(elem.childNodes[1].childNodes[3].childNodes[1])
+      gsap.to(elem.childNodes[1].childNodes[3].childNodes[1], {
+        opacity: 0,
+        top: "-100%",
+        right: "-100%"
+      })
+      gsap.to(elem.childNodes[1].childNodes[3].childNodes[3], {
+        opacity: 1,
+        top: "0%",
+        right: "0%"
+      });
+  })
+  elem.addEventListener("mouseleave",()=>{
+    // console.log(elem.childNodes[1].childNodes[3].childNodes[1])
+    gsap.to(elem.childNodes[1].childNodes[3].childNodes[1], {
+      opacity: 1,
+      top: "0%",
+      right: "0%"
+    })
+    gsap.to(elem.childNodes[1].childNodes[3].childNodes[3], {
+      opacity: 0,
+      top: "100%",
+      right: "100%"
+    });
+})
+})
+}
+casebutton()
