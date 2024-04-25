@@ -184,3 +184,17 @@ function videoplay() {
 }
 videoplay();
 
+
+
+var casevideo = document.querySelectorAll(".case_right")
+
+casevideo.forEach((elem)=>{
+  elem.addEventListener("mouseenter",()=>{
+    elem.childNodes[3].style.opacity=1
+    elem.childNodes[3].play()
+  })
+  elem.addEventListener("mouseleave",()=>{
+    elem.childNodes[3].style.opacity=0
+    elem.childNodes[3].lode()
+  })
+})
