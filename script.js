@@ -181,12 +181,9 @@ function videoplay() {
         borderRadius: "30px",
       });
   });
-}
-videoplay();
 
 
-
-var casevideo = document.querySelectorAll(".case_right")
+  var casevideo = document.querySelectorAll(".case_right")
 
 casevideo.forEach((elem)=>{
   elem.addEventListener("mouseenter",()=>{
@@ -198,3 +195,24 @@ casevideo.forEach((elem)=>{
     elem.childNodes[3].lode()
   })
 })
+
+var smallright = document.querySelectorAll(".small")
+
+smallright.forEach((elem)=>{
+  elem.addEventListener("mouseenter",()=>{
+    // console.log(elem.childNodes[5].childNodes[3])
+    elem.childNodes[3].style.opacity="0"
+    elem.childNodes[5].childNodes[3].play()
+    elem.childNodes[5].childNodes[3].style.top="-70%"
+    elem.childNodes[5].childNodes[3].style.display="inline"
+  })
+  elem.addEventListener("mouseleave",()=>{
+    elem.childNodes[3].style.opacity="1"
+    elem.childNodes[5].childNodes[3].style.top="0%"
+    elem.childNodes[5].childNodes[3].style.display="none"
+    elem.childNodes[5].childNodes[3].lode()
+  })
+})
+}
+videoplay();
+
