@@ -137,24 +137,24 @@ function elemicon() {
       gsap.to(elem.childNodes[5].childNodes[3].childNodes[1], {
         opacity: 0,
         top: "-50%",
-        right: "-50%"
-      })
+        right: "-50%",
+      });
       gsap.to(elem.childNodes[5].childNodes[3].childNodes[3], {
         opacity: 1,
         top: "0%",
-        right: "0%"
+        right: "0%",
       });
     });
     elem.addEventListener("mouseleave", () => {
       gsap.to(elem.childNodes[5].childNodes[3].childNodes[1], {
         opacity: 1,
         top: "0%",
-        right: "0%"
-      })
+        right: "0%",
+      });
       gsap.to(elem.childNodes[5].childNodes[3].childNodes[3], {
         opacity: 0,
         top: "50%",
-        right: "50%"
+        right: "50%",
       });
     });
   });
@@ -182,124 +182,123 @@ function videoplay() {
       });
   });
 
+  var casevideo = document.querySelectorAll(".case_right");
 
-  var casevideo = document.querySelectorAll(".case_right")
-
-casevideo.forEach((elem)=>{
-  elem.addEventListener("mouseenter",()=>{
-    elem.childNodes[3].style.opacity=1
-    elem.childNodes[3].play()
-  })
-  elem.addEventListener("mouseleave",()=>{
-    elem.childNodes[3].style.opacity=0
-    elem.childNodes[3].lode()
-  })
-})
-
-var smallright = document.querySelectorAll(".small")
-
-smallright.forEach((elem)=>{
-  elem.addEventListener("mouseenter",()=>{
-    // console.log(elem.childNodes[1].childNodes[3].childNodes[1])
-    elem.childNodes[3].style.opacity="0"
-    elem.childNodes[5].childNodes[3].play()
-    elem.childNodes[5].childNodes[3].style.top="-70%"
-    elem.childNodes[5].childNodes[3].style.display="inline"
-  })
-  elem.addEventListener("mouseleave",()=>{
-    elem.childNodes[3].style.opacity="1"
-    elem.childNodes[5].childNodes[3].style.top="0%"
-    elem.childNodes[5].childNodes[3].style.display="none"
-    elem.childNodes[5].childNodes[3].lode()
-  })
-  elem.addEventListener("mouseenter",()=>{
-    // console.log(elem.childNodes[1].childNodes[3].childNodes[1])
-    gsap.to(elem.childNodes[1].childNodes[3].childNodes[1], {
-      opacity: 0,
-      top: "-100%",
-      right: "-100%"
-    })
-    gsap.to(elem.childNodes[1].childNodes[3].childNodes[3], {
-      opacity: 1,
-      top: "0%",
-      right: "0%"
+  casevideo.forEach((elem) => {
+    elem.addEventListener("mouseenter", () => {
+      elem.childNodes[3].style.opacity = 1;
+      elem.childNodes[3].play();
     });
-})
-elem.addEventListener("mouseleave",()=>{
-  // console.log(elem.childNodes[1].childNodes[3].childNodes[1])
-  gsap.to(elem.childNodes[1].childNodes[3].childNodes[1], {
-    opacity: 1,
-    top: "0%",
-    right: "0%"
-  })
-  gsap.to(elem.childNodes[1].childNodes[3].childNodes[3], {
-    opacity: 0,
-    top: "100%",
-    right: "100%"
-  });
-})
-})
-}
-videoplay();
-
-function casebutton(){
-  var cbut = document.querySelector(".case_button")
-
-  cbut.addEventListener("mouseenter",()=>{
-    console.log("heloo")
-    gsap.to(".case_button1", {
-      opacity: 0,
-      top: "-50%",
-      right: "-50%"
-    })
-    gsap.to(".case_button2", {
-      opacity: 1,
-      top: "10%",
-      right: "10%"
-    });
-  });
-  cbut.addEventListener("mouseleave",()=>{
-    gsap.to(".case_button1", {
-      opacity: 1,
-      top: "10%",
-      right: "10%"
-    })
-    gsap.to(".case_button2", {
-      opacity: 0,
-      top: "50%",
-      right: "50%"
+    elem.addEventListener("mouseleave", () => {
+      elem.childNodes[3].style.opacity = 0;
+      elem.childNodes[3].lode();
     });
   });
 
-  var casestude = document.querySelectorAll(".case_left")
+  var smallright = document.querySelectorAll(".small");
 
-casestude.forEach((elem)=>{
-  elem.addEventListener("mouseenter",()=>{
+  smallright.forEach((elem) => {
+    elem.addEventListener("mouseenter", () => {
+      // console.log(elem.childNodes[1].childNodes[3].childNodes[1])
+      elem.childNodes[3].style.opacity = "0";
+      elem.childNodes[5].childNodes[3].play();
+      elem.childNodes[5].childNodes[3].style.top = "-70%";
+      elem.childNodes[5].childNodes[3].style.display = "inline";
+    });
+    elem.addEventListener("mouseleave", () => {
+      elem.childNodes[3].style.opacity = "1";
+      elem.childNodes[5].childNodes[3].style.top = "0%";
+      elem.childNodes[5].childNodes[3].style.display = "none";
+      elem.childNodes[5].childNodes[3].lode();
+    });
+    elem.addEventListener("mouseenter", () => {
       // console.log(elem.childNodes[1].childNodes[3].childNodes[1])
       gsap.to(elem.childNodes[1].childNodes[3].childNodes[1], {
         opacity: 0,
         top: "-100%",
-        right: "-100%"
-      })
+        right: "-100%",
+      });
       gsap.to(elem.childNodes[1].childNodes[3].childNodes[3], {
         opacity: 1,
         top: "0%",
-        right: "0%"
+        right: "0%",
       });
-  })
-  elem.addEventListener("mouseleave",()=>{
-    // console.log(elem.childNodes[1].childNodes[3].childNodes[1])
-    gsap.to(elem.childNodes[1].childNodes[3].childNodes[1], {
-      opacity: 1,
-      top: "0%",
-      right: "0%"
-    })
-    gsap.to(elem.childNodes[1].childNodes[3].childNodes[3], {
-      opacity: 0,
-      top: "100%",
-      right: "100%"
     });
-})
-})
+    elem.addEventListener("mouseleave", () => {
+      // console.log(elem.childNodes[1].childNodes[3].childNodes[1])
+      gsap.to(elem.childNodes[1].childNodes[3].childNodes[1], {
+        opacity: 1,
+        top: "0%",
+        right: "0%",
+      });
+      gsap.to(elem.childNodes[1].childNodes[3].childNodes[3], {
+        opacity: 0,
+        top: "100%",
+        right: "100%",
+      });
+    });
+  });
 }
-casebutton()
+videoplay();
+
+function casebutton() {
+  var cbut = document.querySelector(".case_button");
+
+  cbut.addEventListener("mouseenter", () => {
+    console.log("heloo");
+    gsap.to(".case_button1", {
+      opacity: 0,
+      top: "-50%",
+      right: "-50%",
+    });
+    gsap.to(".case_button2", {
+      opacity: 1,
+      top: "10%",
+      right: "10%",
+    });
+  });
+  cbut.addEventListener("mouseleave", () => {
+    gsap.to(".case_button1", {
+      opacity: 1,
+      top: "10%",
+      right: "10%",
+    });
+    gsap.to(".case_button2", {
+      opacity: 0,
+      top: "50%",
+      right: "50%",
+    });
+  });
+
+  var casestude = document.querySelectorAll(".case_left");
+
+  casestude.forEach((elem) => {
+    elem.addEventListener("mouseenter", () => {
+      // console.log(elem.childNodes[1].childNodes[3].childNodes[1])
+      gsap.to(elem.childNodes[1].childNodes[3].childNodes[1], {
+        opacity: 0,
+        top: "-100%",
+        right: "-100%",
+      });
+      gsap.to(elem.childNodes[1].childNodes[3].childNodes[3], {
+        opacity: 1,
+        top: "0%",
+        right: "0%",
+      });
+    });
+    elem.addEventListener("mouseleave", () => {
+      // console.log(elem.childNodes[1].childNodes[3].childNodes[1])
+      gsap.to(elem.childNodes[1].childNodes[3].childNodes[1], {
+        opacity: 1,
+        top: "0%",
+        right: "0%",
+      });
+      gsap.to(elem.childNodes[1].childNodes[3].childNodes[3], {
+        opacity: 0,
+        top: "100%",
+        right: "100%",
+      });
+    });
+  });
+}
+casebutton();
