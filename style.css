@@ -1359,7 +1359,7 @@ nav .nav_bottom {
 }
 
 .client_service {
-    min-height: 100vh;
+    min-height: 50vh;
     width: 100%;
     background-color: #111;
     display: flex;
