@@ -1312,8 +1312,6 @@ nav .nav_bottom {
     }
 }
 
-
-
 .digitaloffers {
     height: 50vh;
     width: 100%;
@@ -1328,6 +1326,30 @@ nav .nav_bottom {
 .digitaloffers>h1 {
     font-size: 5vw;
     line-height: 4.8vw;
+}
+
+@media (max-width: 900px) {
+    .digitaloffers {
+        padding: 3vw;
+    }
+    
+    .digitaloffers>h1 {
+        font-size: 6vw;
+        line-height: 6vw;
+    }
+
+}
+
+@media (max-width: 550px) {
+    .digitaloffers {
+        padding: 2vw;
+    }
+    
+    .digitaloffers>h1 {
+        font-size: 8vw;
+        line-height: 8vw;
+    }
+    
 }
 
 .client_service {
@@ -1530,4 +1552,5 @@ footer img {
     opacity: 0;
 }
 /* responsive */
+
 
