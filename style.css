@@ -493,6 +493,115 @@ nav .nav_bottom {
     z-index: 9;
 }
 
+@media (max-width: 900px) {
+    .intro {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .intro-left {
+        height: 20%;
+        width: 100%;
+        padding: 2vw 0vw;
+    }
+    
+    .secon_text {
+        font-size: 1.5vw;
+        font-weight: 300;
+    }
+    
+    .primary_text {
+        padding-bottom: 20px;
+        padding-right: 0vw;
+        font-size: 1.8vw;
+        font-weight: 300;
+    }
+    
+    .intro-right {
+        height: 80%;
+        width: 100%;
+        /* background-color: #9ec8b0; */
+    }
+    
+    .main_text {
+        padding: 2vw 6vw;
+        width: 70%;
+        font-size: 3vw;
+        font-weight: 400;
+    }
+    
+    .elem_conte h1 {
+        margin-right: 0vw;
+    }
+    
+    .elem_conte .time {
+        padding: 3vw 0vw;
+        gap: 2vw;
+    }
+    
+}
+
+@media (max-width: 550px) {
+    .intro {
+        min-height: 100vh;
+    }
+    
+    .intro-left {
+        height: 30%;
+        width: 100%;
+        padding: 4vw 0vw;
+    }
+    
+    .secon_text {
+        font-size: 3vw;
+        font-weight: 300;
+    }
+    
+    .primary_text {
+        padding-bottom: 20px;
+        padding-right: 0vw;
+        font-size: 3.5vw;
+        font-weight: 300;
+    }
+    
+    .intro-right {
+        height: 70%;
+        width: 100%;
+        /* background-color: #9ec8b0; */
+    }
+
+    .elem_conte{
+        height: auto;
+        flex-direction: column;
+    }
+    
+    .main_text {
+        padding: 5vw 3vw;
+        width: 70%;
+        font-size: 4vw;
+        font-weight: 400;
+    }
+    
+    .elem_conte .time {
+        width: 100%;
+        padding: 5vw 3vw;
+        justify-content: space-between;
+        gap: 2vw;
+    }
+
+    .elem_icon {
+        height: 5vw;
+        width: 5vw;
+    }
+
+    .time i {
+        height: 5vw;
+        width: 5vw;
+        font-size: 3.5vw;
+    }
+}
+
 .videodiv {
     height: 90vh;
     width: 100vw;
@@ -1162,5 +1271,4 @@ footer img {
     opacity: 0;
 }
 /* responsive */
-
 
