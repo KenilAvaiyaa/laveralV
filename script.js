@@ -28,22 +28,34 @@ function navservice() {
 }
 navservice();
 
-function hometext() {
-  let text = document.querySelector(".head_text")
-  // console.log(text.childNodes)
-  // console.log(animated)
-  let t1 = gsap.timeline();
+function loadingAnimation() {
 
-  t1.from(".head_text,.support_text,.highlight_text", {
+  var tl = gsap.timeline()
+  tl.from(".home", {
+      opacity: 0,
+      duration: 0.2,
+      delay: 0.2
+  })
+  tl.from(".home", {
+      transform: "scaleX(0.7) scaleY(0.2) translateY(80%)",
+      borderRadius: "150px",
+      duration: 2,
+      ease: "expo.out"
+  })
+  tl.from("nav", {
+      opacity: 0,
+      delay: -0.2
+  })
+  tl.from(".head_text,.support_text,.highlight_text, .home div", {
     y: "100%",
-    duration: 2,
-    opacity: -1,
-    stagger: {
-      amount: 0.5,
-    },
-  });
+        duration: 2,
+        opacity: 0,
+        stagger: {
+          amount: 0.5,
+        },
+  })
 }
-hometext();
+loadingAnimation()
 
 function buttoneffect() {
   let button = document.querySelector(".contect");
