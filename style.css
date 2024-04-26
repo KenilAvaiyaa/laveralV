@@ -13,7 +13,7 @@ body {
     font-family: helvetica;
 }
 
-.main{
+.main {
     background-color: #fff;
 }
 
@@ -804,7 +804,7 @@ nav .nav_bottom {
     object-fit: cover;
 }
 
-.digitaloffers{
+.digitaloffers {
     height: 50vh;
     width: 100%;
     padding: 5vw;
@@ -815,12 +815,12 @@ nav .nav_bottom {
     align-items: center;
 }
 
-.digitaloffers>h1{
+.digitaloffers>h1 {
     font-size: 5vw;
     line-height: 4.8vw;
 }
 
-.client_service{
+.client_service {
     min-height: 100vh;
     width: 100%;
     background-color: #111;
@@ -832,7 +832,7 @@ nav .nav_bottom {
     display: flex;
 }
 
-.service_left{
+.service_left {
     height: 100%;
     width: 25%;
 }
@@ -858,14 +858,14 @@ nav .nav_bottom {
     text-transform: uppercase;
 }
 
-.service_right{
+.service_right {
     height: 100%;
     width: 75%;
 }
 
 
 
-.uiux{
+.uiux {
     margin-top: 5vw;
     padding: 1.5vw 0vw;
     /* height: 80vh; */
@@ -878,26 +878,26 @@ nav .nav_bottom {
     transition: 0.5s cubic-bezier(0.7, 0, 0.84, 0);
 }
 
-.uiux_heading{
+.uiux_heading {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.uiux_heading i{
+.uiux_heading i {
     font-size: 1.5vw;
 }
 
-.uiux_heading h1{
+.uiux_heading h1 {
     font-size: 3.5vw;
     letter-spacing: -1px;
 }
 
-.uiux_info{
+.uiux_info {
     display: flex;
 }
 
-.uiux_info>h4{
+.uiux_info>h4 {
     font-size: 0.8vw;
     font-weight: 300;
     padding-inline: 1.3vw;
@@ -907,12 +907,12 @@ nav .nav_bottom {
     margin-top: 1.5vw;
 }
 
-.infromation_details{
+.infromation_details {
     width: 100%;
     margin-top: 3vw;
 }
 
-.ui_info_con{
+.ui_info_con {
     transition: 0.5s cubic-bezier(0.7, 0, 0.84, 0);
     opacity: 0;
     overflow: hidden;
@@ -925,29 +925,30 @@ nav .nav_bottom {
     justify-content: space-between;
 }
 
-.ui_info_con:hover{
+.ui_info_con:hover {
     border-top: 1.5px solid rgb(255, 255, 255);
 }
 
-.con_left{
+.con_left {
     display: flex;
     width: 90%;
 }
 
-.con_left>h1{
+.con_left>h1 {
     z-index: 1;
     width: 30%;
     font-weight: 400;
     /* font-size: 1vw; */
 }
-.con_left>h4{
+
+.con_left>h4 {
     z-index: 1;
     font-weight: 300;
     width: 70%;
     font-size: 1vw;
 }
 
-.ui_info_con>.overlay{
+.ui_info_con>.overlay {
     position: absolute;
     top: -100%;
     left: 0;
@@ -956,61 +957,62 @@ nav .nav_bottom {
     background-color: #303030;
 }
 
-footer{
+footer {
     height: 100vh;
     width: 100%;
     background-color: #111;
     position: relative;
 }
-footer img{
+
+footer img {
     height: 100%;
     width: 100%;
     background-position: center;
     object-fit: cover;
 }
 
-.f_text{
+.f_text {
     text-transform: uppercase;
     position: absolute;
     top: 10%;
     left: 10%;
 }
 
-.f_text h1{
+.f_text h1 {
     font-size: 8vw;
     line-height: 7.8vw;
 }
 
-.f_text h1 svg{
+.f_text h1 svg {
     height: 6vw;
 }
 
-.b_f_text{
+.b_f_text {
     text-transform: uppercase;
     position: absolute;
     bottom: 10%;
     right: 10%;
 }
 
-.b_f_text h1{
+.b_f_text h1 {
     font-size: 4vw;
 }
 
-.f_icon{
+.f_icon {
     position: absolute;
     top: 10%;
     right: 10%;
 }
 
-.f_icon .fix_icone_div{
+.f_icon .fix_icone_div {
     position: relative;
 }
 
-.f_icon svg{
+.f_icon svg {
     height: 5vw;
 }
 
-.f_icon .icon2{
+.f_icon .icon2 {
     rotate: 270deg;
     position: absolute;
     top: 0;

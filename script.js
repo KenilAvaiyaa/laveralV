@@ -1,42 +1,39 @@
 function locomotiveAnimation() {
   gsap.registerPlugin(ScrollTrigger);
 
-const locoScroll = new LocomotiveScroll({
-  el: document.querySelector(".main"),
-  smooth: true,
+  const locoScroll = new LocomotiveScroll({
+    el: document.querySelector(".main"),
+    smooth: true,
 
-  // for tablet smooth
-  tablet: { smooth: true },
+    // for tablet smooth
+    tablet: { smooth: true },
 
-  // for mobile
-  smartphone: { smooth: true }
-});
-locoScroll.on("scroll", ScrollTrigger.update);
+    // for mobile
+    smartphone: { smooth: true },
+  });
+  locoScroll.on("scroll", ScrollTrigger.update);
 
-ScrollTrigger.scrollerProxy(".main", {
-  scrollTop(value) {
-    return arguments.length
-      ? locoScroll.scrollTo(value, 0, 0)
-      : locoScroll.scroll.instance.scroll.y;
-  },
-  getBoundingClientRect() {
-    return {
-      top: 0,
-      left: 0,
-      width: window.innerWidth,
-      height: window.innerHeight
-    };
-  }
+  ScrollTrigger.scrollerProxy(".main", {
+    scrollTop(value) {
+      return arguments.length
+        ? locoScroll.scrollTo(value, 0, 0)
+        : locoScroll.scroll.instance.scroll.y;
+    },
+    getBoundingClientRect() {
+      return {
+        top: 0,
+        left: 0,
+        width: window.innerWidth,
+        height: window.innerHeight,
+      };
+    },
+  });
 
-});
+  ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 
-
-ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-
-ScrollTrigger.refresh();
-
+  ScrollTrigger.refresh();
 }
-locomotiveAnimation()
+locomotiveAnimation();
 
 function navservice() {
   const nav = document.querySelector(".service");
@@ -69,33 +66,32 @@ function navservice() {
 navservice();
 
 function loadingAnimation() {
-
-  var tl = gsap.timeline()
+  var tl = gsap.timeline();
   tl.from(".home", {
-      opacity: 0,
-      duration: 0.2,
-      delay: 0.2
-  })
+    opacity: 0,
+    duration: 0.2,
+    delay: 0.2,
+  });
   tl.from(".home", {
-      transform: "scaleX(0.7) scaleY(0.2) translateY(80%)",
-      borderRadius: "150px",
-      duration: 2,
-      ease: "expo.out"
-  })
+    transform: "scaleX(0.7) scaleY(0.2) translateY(80%)",
+    borderRadius: "150px",
+    duration: 2,
+    ease: "expo.out",
+  });
   tl.from("nav", {
-      opacity: 0,
-      delay: -0.2
-  })
+    opacity: 0,
+    delay: -0.2,
+  });
   tl.from(".head_text,.support_text,.highlight_text, .home div", {
     y: "100%",
-        duration: 2,
-        opacity: 0,
-        stagger: {
-          amount: 0.5,
-        },
-  })
+    duration: 2,
+    opacity: 0,
+    stagger: {
+      amount: 0.5,
+    },
+  });
 }
-loadingAnimation()
+loadingAnimation();
 
 function buttoneffect() {
   let button = document.querySelector(".contect");
@@ -301,9 +297,9 @@ function button() {
 
   cbut.addEventListener("mouseenter", () => {
     console.log("heloo");
-    gsap.to(".case_button",{
-      padding:"0.6vw 2vw"
-    })
+    gsap.to(".case_button", {
+      padding: "0.6vw 2vw",
+    });
     gsap.to(".case_button1", {
       opacity: 0,
       top: "-50%",
@@ -316,9 +312,9 @@ function button() {
     });
   });
   cbut.addEventListener("mouseleave", () => {
-    gsap.to(".case_button",{
-      padding:"0.5vw 1vw"
-    })
+    gsap.to(".case_button", {
+      padding: "0.5vw 1vw",
+    });
     gsap.to(".case_button1", {
       opacity: 1,
       top: "10%",
@@ -362,12 +358,12 @@ function button() {
     });
   });
 
-  var uibutton = document.querySelector(".series_button")
+  var uibutton = document.querySelector(".series_button");
   uibutton.addEventListener("mouseenter", () => {
     console.log("heloo");
-    gsap.to(".series_button",{
-      padding:"0.6vw 2vw"
-    })
+    gsap.to(".series_button", {
+      padding: "0.6vw 2vw",
+    });
     gsap.to(".case_button1", {
       opacity: 0,
       top: "-50%",
@@ -380,9 +376,9 @@ function button() {
     });
   });
   uibutton.addEventListener("mouseleave", () => {
-    gsap.to(".series_button",{
-      padding:"0.5vw 1vw"
-    })
+    gsap.to(".series_button", {
+      padding: "0.5vw 1vw",
+    });
     gsap.to(".case_button1", {
       opacity: 1,
       top: "10%",
@@ -397,113 +393,125 @@ function button() {
 }
 button();
 
-function uihovereffect(){
-  var uieffect = document.querySelectorAll(".ui_info_con")
+function uihovereffect() {
+  var uieffect = document.querySelectorAll(".ui_info_con");
 
-uieffect.forEach((elem)=>{
-  elem.addEventListener("mouseenter", () => {
-    // console.log(elem.childNodes[5].childNodes[1])
-    gsap.to(elem.childNodes[1],{
-      top:"0%"
-    })
-    gsap.to(elem.childNodes[5].childNodes[1], {
-      opacity: 0,
-      top: "-50%",
-      right: "-50%",
+  uieffect.forEach((elem) => {
+    elem.addEventListener("mouseenter", () => {
+      // console.log(elem.childNodes[5].childNodes[1])
+      gsap.to(elem.childNodes[1], {
+        top: "0%",
+      });
+      gsap.to(elem.childNodes[5].childNodes[1], {
+        opacity: 0,
+        top: "-50%",
+        right: "-50%",
+      });
+      gsap.to(elem.childNodes[5].childNodes[3], {
+        opacity: 1,
+        top: "0%",
+        right: "0%",
+      });
     });
-    gsap.to(elem.childNodes[5].childNodes[3], {
-      opacity: 1,
-      top: "0%",
-      right: "0%",
+    elem.addEventListener("mouseleave", () => {
+      gsap.to(elem.childNodes[1], {
+        top: "-100%",
+      });
+
+      gsap.to(elem.childNodes[5].childNodes[1], {
+        opacity: 1,
+        top: "0%",
+        right: "0%",
+      });
+      gsap.to(elem.childNodes[5].childNodes[3], {
+        opacity: 0,
+        top: "50%",
+        right: "50%",
+      });
     });
   });
-  elem.addEventListener("mouseleave", () => {
-    gsap.to(elem.childNodes[1],{
-      top:"-100%",
-    })
-    
-    gsap.to(elem.childNodes[5].childNodes[1], {
-      opacity: 1,
-      top: "0%",
-      right: "0%",
-    });
-    gsap.to(elem.childNodes[5].childNodes[3], {
-      opacity: 0,
-      top: "50%",
-      right: "50%",
-    });
-  });
-})
-
 }
-uihovereffect()
-
+uihovereffect();
 
 function uiclick() {
-  var addclick = document.querySelector(".uiux")
-  let flage = 0
+  var addclick = document.querySelector(".uiux");
+  let flage = 0;
 
-  addclick.addEventListener("click",()=>{
-    let t10 = gsap.timeline()
-    if(flage===0){
-      addclick.style.height="80vh"
-      t10.to(".drop_icon",{
-        rotation: 180
-      },"hello")
-      t10.to(".ui_info_con",{
-        opacity:1,
-        ease: "power4.inOut",
-        duration:1
-      },"hello")
-      flage = 1
+  addclick.addEventListener("click", () => {
+    let t10 = gsap.timeline();
+    if (flage === 0) {
+      addclick.style.height = "80vh";
+      t10.to(
+        ".drop_icon",
+        {
+          rotation: 180,
+        },
+        "hello"
+      );
+      t10.to(
+        ".ui_info_con",
+        {
+          opacity: 1,
+          ease: "power4.inOut",
+          duration: 1,
+        },
+        "hello"
+      );
+      flage = 1;
+    } else {
+      addclick.style.height = "20vh";
+      t10.to(
+        ".ui_info_con",
+        {
+          opacity: 0,
+          ease: "power4.inOut",
+          duration: 0.5,
+          delay: 0,
+        },
+        "hello"
+      );
+      t10.to(
+        ".drop_icon",
+        {
+          rotation: 0,
+          delay: 0.3,
+        },
+        "hello"
+      );
+      flage = 0;
     }
-    else{
-      addclick.style.height="20vh"
-      t10.to(".ui_info_con",{
-        opacity:0,
-        ease: "power4.inOut",
-        duration:0.5,
-        delay:0
-      },"hello")
-      t10.to(".drop_icon",{
-        rotation: 0,
-        delay:0.3
-      },"hello")
-      flage = 0
-    }
-  })
+  });
 }
-uiclick()
+uiclick();
 
+function footericon() {
+  var footer = document.querySelector("footer");
 
-function footericon(){
-  var footer = document.querySelector("footer")
-
-  footer.addEventListener("mousemove",()=>{
-    console.log("he")
-    gsap.to(".icon1",{
-      opacity:0,
-      rotation:180,
-      duration:1
-    })
-    gsap.to(".icon2",{
-      opacity:1,
-      rotation:360,
-      duration:1
-    })
-  })
-  footer.addEventListener("mouseleave",()=>{
-    console.log("he")
-    gsap.to(".icon1",{
-      opacity:1,
-      rotation:0,
-      duration:1
-    })
-    gsap.to(".icon2",{
-      opacity:0,
-      rotation:270,
-      duration:1
-    })
-  })
+  footer.addEventListener("mousemove", () => {
+    console.log("he");
+    gsap.to(".icon1", {
+      opacity: 0,
+      rotation: 180,
+      duration: 1,
+    });
+    gsap.to(".icon2", {
+      opacity: 1,
+      rotation: 360,
+      duration: 1,
+    });
+  });
+  footer.addEventListener("mouseleave", () => {
+    console.log("he");
+    gsap.to(".icon1", {
+      opacity: 1,
+      rotation: 0,
+      duration: 1,
+    });
+    gsap.to(".icon2", {
+      opacity: 0,
+      rotation: 270,
+      duration: 1,
+    });
+  });
 }
-footericon()
+footericon();
