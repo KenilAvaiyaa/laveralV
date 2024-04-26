@@ -116,7 +116,7 @@ nav .contect svg {
 nav .nav_bottom {
     height: 0vh;
     position: absolute;
-    background-color: #000;
+    background-color: #111;
     z-index: 9;
     width: 92%;
     top: 100%;
@@ -357,7 +357,7 @@ nav .nav_bottom {
     background-image: url(./images/videopage.webp);
     background-position: center;
     background-size: cover;
-    /* position: relative; */
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 1vw;
@@ -868,9 +868,14 @@ nav .nav_bottom {
 .uiux{
     margin-top: 5vw;
     padding: 1.5vw 0vw;
+    /* height: 80vh; */
+    height: 20vh;
+    overflow: hidden;
+    /* background-color: #0CA34E; */
     width: 100%;
     border-top: 1px solid gray;
     border-bottom: 1px solid gray;
+    transition: 0.5s cubic-bezier(0.7, 0, 0.84, 0);
 }
 
 .uiux_heading{
@@ -908,6 +913,10 @@ nav .nav_bottom {
 }
 
 .ui_info_con{
+    transition: 0.5s cubic-bezier(0.7, 0, 0.84, 0);
+    opacity: 0;
+    overflow: hidden;
+    position: relative;
     border-top: 1px solid gray;
     /* padding: 3vw 0vw; */
     padding-top: 2vw;
@@ -926,12 +935,85 @@ nav .nav_bottom {
 }
 
 .con_left>h1{
+    z-index: 1;
     width: 30%;
     font-weight: 400;
     /* font-size: 1vw; */
 }
 .con_left>h4{
+    z-index: 1;
     font-weight: 300;
     width: 70%;
     font-size: 1vw;
+}
+
+.ui_info_con>.overlay{
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #303030;
+}
+
+footer{
+    height: 100vh;
+    width: 100%;
+    background-color: #111;
+    position: relative;
+}
+footer img{
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    object-fit: cover;
+}
+
+.f_text{
+    text-transform: uppercase;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+.f_text h1{
+    font-size: 8vw;
+    line-height: 7.8vw;
+}
+
+.f_text h1 svg{
+    height: 6vw;
+}
+
+.b_f_text{
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+}
+
+.b_f_text h1{
+    font-size: 4vw;
+}
+
+.f_icon{
+    position: absolute;
+    top: 10%;
+    right: 10%;
+}
+
+.f_icon .fix_icone_div{
+    position: relative;
+}
+
+.f_icon svg{
+    height: 5vw;
+}
+
+.f_icon .icon2{
+    rotate: 270deg;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
 }

@@ -1,3 +1,43 @@
+function locomotiveAnimation() {
+  gsap.registerPlugin(ScrollTrigger);
+
+const locoScroll = new LocomotiveScroll({
+  el: document.querySelector(".main"),
+  smooth: true,
+
+  // for tablet smooth
+  tablet: { smooth: true },
+
+  // for mobile
+  smartphone: { smooth: true }
+});
+locoScroll.on("scroll", ScrollTrigger.update);
+
+ScrollTrigger.scrollerProxy(".main", {
+  scrollTop(value) {
+    return arguments.length
+      ? locoScroll.scrollTo(value, 0, 0)
+      : locoScroll.scroll.instance.scroll.y;
+  },
+  getBoundingClientRect() {
+    return {
+      top: 0,
+      left: 0,
+      width: window.innerWidth,
+      height: window.innerHeight
+    };
+  }
+
+});
+
+
+ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+
+ScrollTrigger.refresh();
+
+}
+locomotiveAnimation()
+
 function navservice() {
   const nav = document.querySelector(".service");
   nav.addEventListener("mouseenter", () => {
@@ -256,7 +296,7 @@ function videoplay() {
 }
 videoplay();
 
-function casebutton() {
+function button() {
   var cbut = document.querySelector(".case_button");
 
   cbut.addEventListener("mouseenter", () => {
@@ -321,5 +361,149 @@ function casebutton() {
       });
     });
   });
+
+  var uibutton = document.querySelector(".series_button")
+  uibutton.addEventListener("mouseenter", () => {
+    console.log("heloo");
+    gsap.to(".series_button",{
+      padding:"0.6vw 2vw"
+    })
+    gsap.to(".case_button1", {
+      opacity: 0,
+      top: "-50%",
+      right: "-50%",
+    });
+    gsap.to(".case_button2", {
+      opacity: 1,
+      top: "10%",
+      right: "10%",
+    });
+  });
+  uibutton.addEventListener("mouseleave", () => {
+    gsap.to(".series_button",{
+      padding:"0.5vw 1vw"
+    })
+    gsap.to(".case_button1", {
+      opacity: 1,
+      top: "10%",
+      right: "10%",
+    });
+    gsap.to(".case_button2", {
+      opacity: 0,
+      top: "50%",
+      right: "50%",
+    });
+  });
 }
-casebutton();
+button();
+
+function uihovereffect(){
+  var uieffect = document.querySelectorAll(".ui_info_con")
+
+uieffect.forEach((elem)=>{
+  elem.addEventListener("mouseenter", () => {
+    // console.log(elem.childNodes[5].childNodes[1])
+    gsap.to(elem.childNodes[1],{
+      top:"0%"
+    })
+    gsap.to(elem.childNodes[5].childNodes[1], {
+      opacity: 0,
+      top: "-50%",
+      right: "-50%",
+    });
+    gsap.to(elem.childNodes[5].childNodes[3], {
+      opacity: 1,
+      top: "0%",
+      right: "0%",
+    });
+  });
+  elem.addEventListener("mouseleave", () => {
+    gsap.to(elem.childNodes[1],{
+      top:"-100%",
+    })
+    
+    gsap.to(elem.childNodes[5].childNodes[1], {
+      opacity: 1,
+      top: "0%",
+      right: "0%",
+    });
+    gsap.to(elem.childNodes[5].childNodes[3], {
+      opacity: 0,
+      top: "50%",
+      right: "50%",
+    });
+  });
+})
+
+}
+uihovereffect()
+
+
+function uiclick() {
+  var addclick = document.querySelector(".uiux")
+  let flage = 0
+
+  addclick.addEventListener("click",()=>{
+    let t10 = gsap.timeline()
+    if(flage===0){
+      addclick.style.height="80vh"
+      t10.to(".drop_icon",{
+        rotation: 180
+      },"hello")
+      t10.to(".ui_info_con",{
+        opacity:1,
+        ease: "power4.inOut",
+        duration:1
+      },"hello")
+      flage = 1
+    }
+    else{
+      addclick.style.height="20vh"
+      t10.to(".ui_info_con",{
+        opacity:0,
+        ease: "power4.inOut",
+        duration:0.5,
+        delay:0
+      },"hello")
+      t10.to(".drop_icon",{
+        rotation: 0,
+        delay:0.3
+      },"hello")
+      flage = 0
+    }
+  })
+}
+uiclick()
+
+
+function footericon(){
+  var footer = document.querySelector("footer")
+
+  footer.addEventListener("mousemove",()=>{
+    console.log("he")
+    gsap.to(".icon1",{
+      opacity:0,
+      rotation:180,
+      duration:1
+    })
+    gsap.to(".icon2",{
+      opacity:1,
+      rotation:360,
+      duration:1
+    })
+  })
+  footer.addEventListener("mouseleave",()=>{
+    console.log("he")
+    gsap.to(".icon1",{
+      opacity:1,
+      rotation:0,
+      duration:1
+    })
+    gsap.to(".icon2",{
+      opacity:0,
+      rotation:270,
+      duration:1
+    })
+  })
+}
+footericon()
