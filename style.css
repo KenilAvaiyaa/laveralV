@@ -15,6 +15,7 @@ body {
 
 .main {
     background-color: #fff;
+    overflow: hidden;
 }
 
 nav {
@@ -124,6 +125,59 @@ nav .nav_bottom {
     transition: 0.5s cubic-bezier(0.7, 0, 0.84, 0);
 }
 
+@media (max-width: 900px) {
+    nav {
+        height: 10vh;
+    }
+    
+    nav .logo svg {
+        width: 15vw;
+    }
+    
+    nav .service {
+        display: none;
+    }
+    
+    nav .contect {
+        padding-inline-start: 2vw;    
+    }
+    
+    nav .contect h4 {
+        font-size: 1.2vw;
+        font-weight: 600;
+    }
+    
+    nav .contect svg {
+        height: 4vw;
+        width: 4vw;
+    }
+    
+    nav .nav_bottom {
+        display: none;
+    }
+}
+
+@media (max-width: 550px) {
+    nav {
+        height: 8vh;
+    }
+    nav .logo svg {
+        width: 20vh;
+    }
+    nav .contect {
+        padding-inline-start: 0vw;    
+    }
+    nav .contect h4 {
+        display: none;
+    }
+    nav .contect svg {
+        margin-left: 0;
+        height: 7vw;
+        width: 7vw;
+    }
+}
+
+
 .home {
     height: 100vh;
     width: 100vw;
@@ -192,7 +246,7 @@ nav .nav_bottom {
 
 .moving-div .move {
     display: inline-block;
-    animation: marquee 5s linear infinite;
+    animation: marquee 10s linear infinite;
 }
 
 .moving-div .move img {
@@ -213,7 +267,7 @@ nav .nav_bottom {
 .blur-left {
     height: 100%;
     width: 10%;
-    background: linear-gradient(to right, #000, transparent);
+    background: linear-gradient(to right, #111, transparent);
     position: absolute;
     top: 0%;
     left: 0%;
@@ -223,12 +277,100 @@ nav .nav_bottom {
 .blur-right {
     height: 100%;
     width: 10%;
-    background: linear-gradient(to right, transparent, #000);
+    background: linear-gradient(to right, transparent, #111);
     position: absolute;
     top: 0%;
     right: 0%;
     z-index: 1;
 }
+
+@media (max-width: 900px) {
+    .home {
+        align-items: start;
+    }
+    
+    .home .head_text {
+        letter-spacing: -4px;
+        font-size: 10vw;
+    } 
+
+    .home h1 svg {
+        height: 6.5vw;
+        width: 6.5vw;
+    }
+    
+    .home p {
+        text-align: start;
+        font-size: 2vw;
+        font-weight: 400;
+        line-height: 2vw;
+    }
+    
+    .home .highlight_text {
+        margin-top: 1.2vw;
+    }
+
+    .home .moving-div {
+        width: 100%;
+    }
+    
+    .moving-div .move img {
+        height: 2.5vw;
+        margin: 0vw 1.6vw;
+    }
+    
+    
+    .blur-left {
+        width: 15%;
+    }
+    
+    .blur-right {
+        width: 15%;
+    }
+    
+}
+
+@media (max-width: 550px) {
+    .home .head_text {
+        padding-right: 30%;
+        font-size: 15vw;
+        line-height: 14vw;
+    } 
+
+    .home h1 svg {
+        height: 10vw;
+        width: 10vw;
+    }
+    
+    .home p {
+        padding-right: 30%;
+        font-size: 4vw;
+        font-weight: 300;
+        line-height: 4vw;
+    }
+    
+    .home .highlight_text {
+        line-height: 9vw;
+        padding-right: 35%;
+    }
+
+    .home .highlight_text .h_text {
+        padding-inline: 4vw;
+        padding-block: 2vw;
+    }
+    
+    .moving-div .move img {
+        height: 6vw;
+        margin: 0vw 2vw;
+    }
+    .blur-left {
+        width: 20%;
+    }
+    .blur-right {
+        width: 20%;
+    }
+}
+
 
 .intro {
     height: 80vh;
@@ -1019,3 +1161,6 @@ footer img {
     left: 0;
     opacity: 0;
 }
+/* responsive */
+
+
