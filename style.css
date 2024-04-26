@@ -131,7 +131,7 @@ nav .nav_bottom {
     align-items: center;
 }
 
-.home h1 {
+.home .head_text {
     text-transform: uppercase;
     font-weight: bolder;
     font-size: 9vw;
@@ -648,9 +648,11 @@ nav .nav_bottom {
     justify-content: center;
     align-items: center;
     gap: 1vw;
+    color: white;
 }
 
 .case_button>p {
+    font-weight: 600;
     font-size: 0.8vw;
     text-transform: uppercase;
 }

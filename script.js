@@ -29,6 +29,9 @@ function navservice() {
 navservice();
 
 function hometext() {
+  let text = document.querySelector(".head_text")
+  // console.log(text.childNodes)
+  // console.log(animated)
   let t1 = gsap.timeline();
 
   t1.from(".head_text,.support_text,.highlight_text", {
@@ -246,6 +249,9 @@ function casebutton() {
 
   cbut.addEventListener("mouseenter", () => {
     console.log("heloo");
+    gsap.to(".case_button",{
+      padding:"0.6vw 2vw"
+    })
     gsap.to(".case_button1", {
       opacity: 0,
       top: "-50%",
@@ -258,6 +264,9 @@ function casebutton() {
     });
   });
   cbut.addEventListener("mouseleave", () => {
+    gsap.to(".case_button",{
+      padding:"0.5vw 1vw"
+    })
     gsap.to(".case_button1", {
       opacity: 1,
       top: "10%",
