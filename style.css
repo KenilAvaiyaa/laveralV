@@ -172,8 +172,8 @@ nav .nav_bottom {
     }
     nav .contect svg {
         margin-left: 0;
-        height: 7vw;
-        width: 7vw;
+        height: 9vw;
+        width: 9vw;
     }
 }
 
@@ -352,11 +352,14 @@ nav .nav_bottom {
     .home .highlight_text {
         line-height: 9vw;
         padding-right: 35%;
+        font-size: 3vw;
     }
 
     .home .highlight_text .h_text {
-        padding-inline: 4vw;
-        padding-block: 2vw;
+        text-transform: capitalize;
+        /* padding-inline: 4vw;
+        padding-block: 2vw; */
+        padding: 2vw 4vw;
     }
     
     .moving-div .move img {
