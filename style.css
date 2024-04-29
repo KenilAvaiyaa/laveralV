@@ -11,6 +11,7 @@ body {
     background: #fff;
     color: white;
     font-family: helvetica;
+    /* cursor: none; */
 }
 
 .main {
@@ -412,6 +413,7 @@ nav .nav_bottom {
 .intro-right {
     height: 100%;
     width: 50%;
+    cursor: none;
     /* background-color: #9ec8b0; */
 }
 

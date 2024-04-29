@@ -35,6 +35,14 @@ function locomotiveAnimation() {
 }
 locomotiveAnimation();
 
+Shery.mouseFollower({
+  skew: true,
+  ease: "cubic-bezier(0.87, 0, 0.13, 1)",
+  duration: 1,
+});
+
+Shery.makeMagnet(".logo svg,.b_f_text");
+
 function navservice() {
   const nav = document.querySelector(".service");
   nav.addEventListener("mouseenter", () => {
