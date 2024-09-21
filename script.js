@@ -35,12 +35,15 @@ function locomotiveAnimation() {
 }
 locomotiveAnimation();
 
+
 function mouseeffect(){
-  Shery.mouseFollower({
-    skew: true,
-    ease: "cubic-bezier(0.87, 0, 0.13, 1)",
-    duration: 1,
-  });
+  if (window.innerWidth > 768) {
+    Shery.mouseFollower({
+      skew: true,
+      ease: "cubic-bezier(0.87, 0, 0.13, 1)",
+      duration: 1,
+    });
+  }
   
   Shery.makeMagnet(".logo svg,.b_f_text");
 }

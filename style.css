@@ -864,6 +864,7 @@ nav .nav_bottom {
     height: 60vh;
     width: 70%;
     background-color: #bcdecb;
+    overflow: hidden;
 }
 
 .case_right img {
