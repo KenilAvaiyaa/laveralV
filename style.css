@@ -488,8 +488,8 @@ nav .nav_bottom {
 
 .elem_conte img {
     position: absolute;
-    height: 18vw;
-    width: 18vw;
+    height: 6vw;
+    width: 6vw;
     background-position: center;
     object-fit: cover;
     border-radius: 50%;
@@ -604,6 +604,12 @@ nav .nav_bottom {
         height: 5vw;
         width: 5vw;
         font-size: 3.5vw;
+    }
+
+    .elem_conte img {
+        
+        height: 18vw;
+        width: 18vw;
     }
 }
 

@@ -37,6 +37,7 @@ locomotiveAnimation();
 
 
 function mouseeffect(){
+  
   if (window.innerWidth > 768) {
     Shery.mouseFollower({
       skew: true,
